@@ -14,6 +14,13 @@ body, html{
     border:1px solid green;
     outline:none;
 }
+.bottom{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
 .upper{
     display: flex;
     flex-direction: column;
@@ -34,6 +41,11 @@ body, html{
     gap: 20px;
     padding-top: 20px;
     background-color: rgb(156, 155, 154);
+    padding-bottom: 10px;
+}
+#slctcolor{
+    color:rgb(183, 255, 68);
+    font-weight: bold;
 }
 .Rows,.Columns{
     display: flex;
@@ -42,7 +54,11 @@ body, html{
     font-weight: bold;
     color:brown;
 }
-#generatebtn{
+.buttons{
+    display: flex;
+    gap:120px;
+}
+.btn{
     width:120px;
     height: 45px;
     border:none;
@@ -58,7 +74,6 @@ body, html{
     display: flex;
     justify-content: center;
     gap:10px;
-    margin-left: 17px;
 }
 .container{
     display:flex;

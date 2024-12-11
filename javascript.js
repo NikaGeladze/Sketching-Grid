@@ -7,6 +7,15 @@ const container = document.querySelector(".container");
 const rowsinput = document.querySelector("#rowsinput");
 const columnsinput = document.querySelector("#columnsinput");
 const generatebtn = document.querySelector("#generatebtn");
+const clearbtn = document.querySelector("#clearbtn");
+const colorin = document.querySelector("#colorpicker");
+clearbtn.addEventListener("click",() => {
+    const squares = document.querySelectorAll(".square");
+    squares.forEach((sqr) =>{
+        sqr.style.background = "white";
+    })
+
+})
 generatebtn.addEventListener("click",() =>
 {
     generateDisplay(+rowsinput.value,+columnsinput.value);
@@ -39,21 +48,21 @@ function generateDisplay(nrows,ncolumns)
                 row.appendChild(square);
             }
     }
-    container.addEventListener("mousemove",(sqr) => handleMouseOver(sqr.target))
+    container.addEventListener("mousemove",(sqr) => handleMouseOver(sqr.target,colorin.value))
     container.addEventListener("click",(sqr) => 
         {
             held = true;
-            handleMouseOver(sqr.target);
+            handleMouseOver(sqr.target,colorin.value);
             held = false;
 })
 
     container.addEventListener("mousedown", () => held = true);
 }
 
-function handleMouseOver(square)
+function handleMouseOver(square,color)
 {
     if(held && square.classList.contains("square")) 
     {
-        square.style.background = "palevioletred";
+        square.style.background = color;
     }
 }
