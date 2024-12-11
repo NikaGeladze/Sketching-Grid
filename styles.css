@@ -4,18 +4,61 @@ body, html{
     height: 100%;
     box-sizing: border-box;
     background-color: darkgray;
+    font-family: 'Courier New', Courier, monospace;
 }
 .row{
     display: flex;
+}
+.upper{
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+.header{
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color:rgb(178, 255, 76);
+    background-color: rgb(141, 150, 158);
+}
+.inputcontainer{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+.Rows,.Columns{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#generatebtn{
+    width:120px;
+    height: 45px;
+    border:none;
+    border-radius: 8px;
+    background-color: rgb(179, 255, 230);
+    color:blueviolet;
+    font-weight: bold;
+    font-size: 16px;
+    border:2px solid rgb(178, 255, 76)
+}
+.inputinfo{
+    display: flex;
+    justify-content: center;
+    gap:10px;
 }
 .container{
     display:flex;
     flex-direction: column;
     align-items: center;
-    padding-top: 50px;
+    padding-top: 30px;
+  
 }
 .square{
-    border: 1px solid rgb(189, 164, 136);
+    border: 1px solid rgb(190, 164, 136);
     background-color: white;
     opacity: 1;
     user-select: none;
