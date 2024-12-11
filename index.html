@@ -15,11 +15,17 @@
         </div>
         <div class="inputcontainer">
             <div class="inputinfo">
-                <span class="Rows">Rows:<input type="text" name="rows" id="rowsinput"></span>
-                <span class="Columns">Columns:<input type="text" name="columns" id="columnsinput"></span>
+                <span class="Rows">Rows:<input type="number" min="0" max="100" name="columns" id="rowsinput" 
+                    oninput="this.value = Math.min(Math.max(this.value, 0), 100)"value="16"></span>
+                <span class="Columns">Columns:<input type="number" min="0" max="100" name="columns" id="columnsinput" 
+                    oninput="this.value = Math.min(Math.max(this.value, 0), 100)"value="16"></span>
               
             </div>
-            <button id="generatebtn">Generate Grid</button>
+            <div class="buttons">
+                <button id="generatebtn">Generate Grid</button>
+
+            </div>
+            
         </div>
        
     </div>

@@ -1,15 +1,26 @@
-let rows = 16;
-let columns = 16;
+let defaultrows = 16;
+let defaultcolumns = 16;
 let maxWidth = 500;
 let maxHeight = 500;
 let held = false;
 const container = document.querySelector(".container");
-document.addEventListener("DOMContentLoaded",() => generateDisplay(rows,columns));
+const rowsinput = document.querySelector("#rowsinput");
+const columnsinput = document.querySelector("#columnsinput");
+const generatebtn = document.querySelector("#generatebtn");
+generatebtn.addEventListener("click",() =>
+{
+    generateDisplay(+rowsinput.value,+columnsinput.value);
+})
+
+document.addEventListener("DOMContentLoaded",() => generateDisplay(defaultrows,defaultcolumns));
 document.addEventListener("mouseup", () => held = false);
 
 
 function generateDisplay(nrows,ncolumns)
 {
+    while (container.firstChild) {
+        container.removeChild(container.firstChild);
+      }
     for(let i = 0;i < ncolumns;i++)
         {
             const row = document.createElement("div");
@@ -20,8 +31,8 @@ function generateDisplay(nrows,ncolumns)
             {
                 const square = document.createElement("div");
                 square.classList.add("square");
-                let sqwidth = Math.round(maxWidth/rows);
-                let sqHeight = Math.round(maxHeight/columns);
+                let sqwidth = Math.round(maxWidth/nrows);
+                let sqHeight = Math.round(maxHeight/ncolumns);
                 square.style.width = `${sqwidth}px`;
                 square.style.height = `${sqHeight}px`;
                 

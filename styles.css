@@ -3,16 +3,20 @@ body, html{
     margin:0px;
     height: 100%;
     box-sizing: border-box;
-    background-color: darkgray;
+    background-color: rgb(150, 147, 143);
     font-family: 'Courier New', Courier, monospace;
 }
 .row{
     display: flex;
 }
+#rowsinput,#columnsinput{
+    border-radius: 5px;
+    border:1px solid green;
+    outline:none;
+}
 .upper{
     display: flex;
     flex-direction: column;
-    gap:20px;
 }
 .header{
     display: flex;
@@ -20,7 +24,7 @@ body, html{
     font-size: 25px;
     font-weight: bold;
     color:rgb(178, 255, 76);
-    background-color: rgb(141, 150, 158);
+    background-color: rgb(48, 37, 58);
 }
 .inputcontainer{
     display: flex;
@@ -28,11 +32,15 @@ body, html{
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding-top: 20px;
+    background-color: rgb(156, 155, 154);
 }
 .Rows,.Columns{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
+    color:brown;
 }
 #generatebtn{
     width:120px;
@@ -43,12 +51,14 @@ body, html{
     color:blueviolet;
     font-weight: bold;
     font-size: 16px;
-    border:2px solid rgb(178, 255, 76)
+    border:2px solid rgb(178, 255, 76);
 }
+
 .inputinfo{
     display: flex;
     justify-content: center;
     gap:10px;
+    margin-left: 17px;
 }
 .container{
     display:flex;
