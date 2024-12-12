@@ -3,6 +3,8 @@ body, html{
     margin:0px;
     height: 100%;
     box-sizing: border-box;
+    display:flex;
+    flex-direction: column;
     background-color: rgb(150, 147, 143);
     font-family: 'Courier New', Courier, monospace;
 }
@@ -43,9 +45,22 @@ body, html{
     background-color: rgb(156, 155, 154);
     padding-bottom: 10px;
 }
-#slctcolor{
-    color:rgb(183, 255, 68);
+.selectors{
+    color:rgb(255, 187, 0);
     font-weight: bold;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.options{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+#gridstate{
+    margin: 0px;
 }
 .Rows,.Columns{
     display: flex;
@@ -82,10 +97,35 @@ body, html{
     padding-top: 30px;
   
 }
-.square{
-    border: 1px solid rgb(190, 164, 136);
+.footer{
+    display:flex;
+    justify-content: center;
+    background-color: rgb(49, 44, 41);
+    color:brown;
+}
+.row{
     background-color: white;
-    opacity: 1;
+}
+.colors{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:20px;
+}
+.square{
+    border: 1px solid rgba(190, 164, 136);
+    background-color: rgba(255, 255, 255, 0);
     user-select: none;
     box-sizing: border-box;
+}
+.grid{
+   display:flex;
+   justify-content: center;
+   align-items: center;
+   gap:50px;
+   margin-right: 100px;
+   height: f;
+   flex:1;
+   margin-bottom: 30px;
 }
