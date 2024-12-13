@@ -9,4 +9,4 @@ Opacity Fill Toggle: Decide whether your strokes overwrite or build up opacity.
 Preview:
 
 ![Screenshot From 2024-12-13 00-31-01](https://github.com/user-attachments/assets/ef5255ce-56ad-4832-ba1d-1124a86315c4)
-A sketch of me on my website (c) tatia.
+A sketch of me on my website (c) Tatia.
