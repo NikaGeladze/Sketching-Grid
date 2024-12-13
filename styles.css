@@ -100,8 +100,10 @@ body, html{
 .footer{
     display:flex;
     justify-content: center;
+    align-items: center;
     background-color: rgb(49, 44, 41);
     color:brown;
+    padding:8px;
 }
 .row{
     background-color: white;
